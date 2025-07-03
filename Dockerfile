@@ -16,7 +16,7 @@ RUN R -e "install.packages(c('devtools', 'shiny', 'DT', 'dplyr', 'pROC', 'epiR',
 
 COPY . /home/app
 
-RUN R -e "devtools::install_github('Youngho-Cha/Submission-package-using-R')"
+RUN R -e "devtools::install_github('Youngho-Cha/Submission-package-using-R', upgrade = 'never')"
 
 EXPOSE 3838
 
