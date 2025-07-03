@@ -12,7 +12,7 @@ RUN apt-get update && apt-get install -y \
     libjpeg-dev \
     && apt-get clean
 
-RUN R -e "install.packages(c('devtools', 'shiny', 'DT', 'dplyr', 'pROC', 'epiR'))"
+RUN R -e "install.packages(c('devtools', 'shiny', 'DT', 'dplyr', 'pROC', 'epiR', 'roxygen2', 'usethis', 'remotes'))"
 
 COPY . /home/app
 
