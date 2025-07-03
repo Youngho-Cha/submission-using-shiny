@@ -12,6 +12,7 @@ After installing [Docker Desktop](https://www.docker.com/products/docker-desktop
 
 ```bash
 docker --version
+```
 
 You should see the installed Docker version
 
@@ -22,6 +23,7 @@ Use the following commands to clone the repository and move into the project fol
 ```bash
 git clone https://github.com/Youngho-Cha/submission-using-shiny.git
 cd submission-using-shiny
+```
 
 This will download the source code and set your working directory to the project folder.
 
@@ -31,6 +33,7 @@ Build the Docker image using the following command:
 
 ```bash
 docker build --no-cache -t submission-app .
+```
 
 ### 4. 🧱 Run the Shiny App Inside the Docker Container
 
@@ -38,6 +41,7 @@ Launch the Shiny app by running:
 
 ```bash
 docker run -p 3838:3838 submission-app
+```
 
 This command runs the app inside a container and maps port 3838 to your local machine.
 
@@ -47,5 +51,6 @@ After the container starts, open your browser and visit:
 
 ```arduino
 http://localhost:3838
+```
 
 You should see the Shiny app running and ready to use.
