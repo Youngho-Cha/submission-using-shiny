@@ -2,11 +2,11 @@
 
 ## How to use:
 
-* Verify Docker Installation
-** After installing Docker Desktop, open a terminal or command prompt and run:
+### 1. ✅ Verify Docker Installation
+After installing [Docker Desktop](https://www.docker.com/products/docker-desktop/), open a terminal and run the following command to check if Docker is working:
+
 ```bash
 docker --version
-```
     
 
 ## Contact
