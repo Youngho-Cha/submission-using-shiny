@@ -20,4 +20,4 @@ RUN R -e "remotes::install_github('Youngho-Cha/Submission-package-using-R')"
 
 EXPOSE 3838
 
-CMD ["Rscript", "/home/app/docker/start_app.R"]
+CMD ["Rscript", "/home/app/start_app.R"]
