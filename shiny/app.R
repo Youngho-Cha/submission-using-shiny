@@ -1,7 +1,7 @@
 library(shiny)
 library(DT)
 library(dplyr)
-library(submission.package)
+library(submission.shiny)
 
 ui=fluidPage(
   titlePanel("Medical Device Performance Evaluation"),
