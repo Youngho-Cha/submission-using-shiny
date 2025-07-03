@@ -1,3 +1,25 @@
-1. Purpose:
-2. How to use:
-3. Contact
+## Purpose:
+
+## How to use:
+
+* Verify Docker Installation
+** After installing Docker Desktop, open a terminal or command prompt and run:
+```bash
+docker --version
+```
+    
+
+## Contact
+
+
+docker --version
+
+git clone https://github.com/your-username/submission-using-shiny.git
+cd submission-using-shiny
+
+docker build -t submission-app .
+    success : Successfully tagged submission-app:latest
+
+docker run -p 3838:3838 submission-app
+
+http://localhost:3838
