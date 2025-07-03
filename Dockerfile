@@ -17,7 +17,7 @@ ENV R_REMOTES_NO_ERRORS_FROM_WARNINGS=true
 
 RUN R -e "install.packages(c('devtools', 'shiny', 'DT', 'dplyr', 'pROC', 'epiR', 'roxygen2', 'usethis', 'remotes', 'htmlTable'))"
 
-RUN R -e "devtools::install_github('Youngho-Cha/Submission-package-using-R')"
+RUN R -e "devtools::install_github('Youngho-Cha/Submission-package-using-R', force=TRUE, upgrade='never')"
 
 COPY . /home/app
 
