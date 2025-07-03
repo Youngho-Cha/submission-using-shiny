@@ -16,7 +16,7 @@ RUN R -e "install.packages(c('devtools', 'shiny', 'DT', 'dplyr', 'pROC', 'epiR',
 
 COPY . /home/app
 
-RUN R -e "remotes::install_github('Youngho-Cha/Submission-package-using-R')"
+RUN R -e "remotes::install_github('Youngho-Cha/Submission-package-using-R', subdir = 'submission.package')"
 
 EXPOSE 3838
 
