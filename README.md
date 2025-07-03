@@ -21,7 +21,7 @@ You should see the installed Docker version
 Use the following commands to clone the repository and move into the project folder:
 
 ```bash
-git clone https://github.com/[Your-name]/submission-using-shiny.git
+git clone https://github.com/Youngho-Cha/submission-using-shiny.git
 cd submission-using-shiny
 ```
 
