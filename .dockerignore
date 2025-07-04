@@ -6,3 +6,6 @@
 report/
 tests/
 renv/
+vignettes/
+data-raw/
+shiny/
