@@ -2,6 +2,11 @@ FROM rocker/shiny:latest
 
 RUN apt-get update && apt-get install -y \
     libproj-dev \
+    proj-data \
+    proj-bin \
+    libgdal-dev \
+    gdal-bin \
+    libgeos-dev \
     libudunits2-dev \
     libcurl4-openssl-dev \
     libssl-dev \
@@ -12,6 +17,8 @@ RUN apt-get update && apt-get install -y \
     libpng-dev \
     libtiff5-dev \
     libjpeg-dev \
+    && ln -s /usr/lib/x86_64-linux-gnu/libproj.so.22 /usr/lib/x86_64-linux-gnu/libproj.so.25 || true \
+    && ln -s /usr/lib/x86_64-linux-gnu/libgdal.so.30 /usr/lib/x86_64-linux-gnu/libgdal.so.34 || true \
     && apt-get clean
 
 ENV R_REMOTES_UPGRADE=never
