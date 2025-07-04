@@ -16,11 +16,11 @@ RUN apt-get update && apt-get install -y \
 ENV R_REMOTES_UPGRADE=never
 ENV R_REMOTES_NO_ERRORS_FROM_WARNINGS=true
 
-RUN R -e "install.packages(c('devtools', 'shiny', 'DT', 'dplyr', 'pROC', 'epiR', 'roxygen2', 'usethis', 'remotes', 'htmlTable'))"
-
-RUN R -e "remotes::install_github('Youngho-Cha/Submission-package-using-R', force=TRUE, upgrade='never')"
+RUN R -e "install.packages(c('shiny', 'DT', 'dplyr', 'pROC', 'epiR', 'htmlTable'))"
 
 COPY . /home/app
+
+RUN R -e "install.packages('/home/app/submission.package', repos = NULL, type = 'source')"
 
 EXPOSE 3838
 
