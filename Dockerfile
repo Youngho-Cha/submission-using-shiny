@@ -1,7 +1,7 @@
 FROM rocker/shiny:latest
 
 RUN apt-get update && apt-get install -y \
-    libproj-dev
+    libproj-dev \
     libudunits2-dev \
     libcurl4-openssl-dev \
     libssl-dev \
