@@ -54,3 +54,74 @@ http://localhost:3838
 ```
 
 You should see the Shiny app running and ready to use.
+
+---
+
+## 📝 How to Use the Shiny App
+
+### 1. Upload CSV File
+
+Upload the dataset to be analyzed.  
+> ⚠️ Only `.csv` files are accepted.
+
+· · · · · · · · · ·
+
+#### 1.1 Select Actual Variable  
+Select the variable that represents the **true class (actual condition)** of the patient.
+
+##### 1.1.1 Which value is POSITIVE for Actual?  
+Among the values of the variable selected in 1.1, choose the one that represents **positive (1)**.
+
+· · · · · · · · · ·
+
+#### 1.2 Select Predicted Variable  
+Select the variable that represents the **predicted condition** of the patient.
+
+##### 1.2.1 Which value is POSITIVE for Predicted?  
+Among the values of the variable selected in 1.2, choose the one that represents **positive (1)**.
+
+· · · · · · · · · ·
+
+#### 1.3 Select Score Variable (optional)  
+Select the variable that represents **prediction score (e.g., probability)**.  
+This is optional — set it to `None` if you don’t want to calculate AUC or if the data doesn’t contain score variables.
+
+· · · · · · · · · ·
+
+### 2. Select Metrics to Calculate  
+Choose the performance metrics to compute.
+
+· · · · · · · · · ·
+
+### 3. Binary CI Method  
+Choose the method to calculate **confidence intervals** for binary metrics such as sensitivity, specificity, PPV, NPV, and accuracy.
+
+· · · · · · · · · ·
+
+### 4. AUC CI Method  
+Choose the method to calculate the **confidence interval** for AUC.
+
+· · · · · · · · · ·
+
+### 5. Significance Level (α)  
+Select the significance level to compute **100(1−α)% confidence intervals**.
+
+· · · · · · · · · ·
+
+### 6. Bootstrap Iterations  
+If AUC is to be calculated and the CI method is set to `"bootstrap"`, specify the number of bootstrap samples.
+
+· · · · · · · · · ·
+
+### 7. Decimal Places for Results  
+Choose the number of decimal places to display in the output results.
+
+· · · · · · · · · ·
+
+### 📤 Saving the Report
+
+As you select or change each setting, the results will automatically be updated in the right-hand panel.  
+To save the result table, click the **"Download Report"** button on the bottom left.
+
+> 📁 The report will be saved to the `/reports` directory with the filename format:  
+> `performance_report_YYYYMMDD_hhmm.csv`
